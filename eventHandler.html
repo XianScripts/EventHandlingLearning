@@ -6,25 +6,23 @@
     <title>Event Handling</title>
 </head>
 <body>
-    <button>Click me</button>
-    <button class="button2">Act-once button</button>
-
-    <p>No handler here.</p>
-    <script>
-        let button = document.querySelector('button');
-        button.addEventListener('click', () => {
-            alert("You clicked me!!");
-        });
-
-
-        const button2 = document.querySelector('.button2');
-        function once() {
-            alert('Done.');
-            button.removeEventListener('click', once);
+   <button>CLick me any way you want</button>
+   <script>
+    const button = document.querySelector('button');
+    button.addEventListener('mousedown', event => {
+        if (event.button == 0) {
+            alert("Left button");
         }
-        button2.addEventListener('click', once);
-    </script>
+        else if (event.button == 1) {
+            alert("Middle button");
+        }
+        else if (event.button == 2) {
+            alert("Right button");
+        }
+    });
 
+
+   </script>
 
     
     
