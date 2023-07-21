@@ -6,14 +6,15 @@
     <title>Event Handling</title>
 </head>
 <body>
-    <p>Click this document to activate the handler.</p>
-
-
+    <button>Click me</button>
+    <p>No handler here.</p>
     <script>
-        window.addEventListener('click', () => {
-            console.log("You knocked?");
+        let button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            alert("You clicked me!!");
         });
     </script>
-    
+
+
 </body>
 </html>
